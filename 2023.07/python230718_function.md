@@ -161,7 +161,101 @@ result = map(lambda x: x * 2, numbers)
 print(result)  # [2, 4, 6, 8, 10]
 ```
 
+### Packing 패킹
+- 여러 개의 값을 하나의 변수에 묶어서 담는 것
+- 변수에 담긴 값들은 튜플 형태로 묶임
+```
+packed_values = 1, 2, 3, 4, 5
+print(packed_values) # (1, 2, 3, 4, 5)
+```
+- '*'을 활용한 패킹
+```
+numbers = [1, 2, 3, 4, 5]
+a, *b, c = numbers
+
+print(a)  # 1
+print(b)  # [2, 3, 4]
+print(c)  # 5
+
+```
+
+### Unpacking 언패킹
+- 패킹된 변수의 값을 개별적인 변수로 분리하여 할당하는 것
+- 튜플/리스트 등의 객체의 요소들을 개별 변수에 할당
+```
+lst = [1, 2, 3]
+a, b, c = lst
+
+print(a) # 1
+print(b) # 2
+print(c) # 3
+```
+- '*'을 활용한 언패킹
+    - '*'은 리스트의 요소를 언패킹함
+```
+#활용예시 1 2 3 으로 출력하고 싶은 경우
+results = [1, 2, 3] 
+print(*results)  # 언패킹
+```
+- ‘**’을 활용한 언패킹 (non-iterable unpacking)
+    - ‘**’은 딕셔너리의 키-값 쌍을 함수의 키워드 인자로 언패킹
+
+```
+def my_function(x, y, z):
+	print(x, y, z)
+
+my_dict = {'x': 1, 'y': 2, 'z': 3}
+my_function(**my_dict)  # 1 2 3
+```
+
+## 모듈
+- **재사용**하기 위한 코드 조각 , 이미 만들어져 있음!
+- 한 파일로 묶인 변수와 함수의 모음
+- 특정한 기능을 하는 코드가 작성된 파이썬 파일(.py)
+- 모듈 내 변수/함수에 접근하기 위해서는 import문 필요
+    - ex) import math
+    - help(math) 통해 모듈에 대한 설명 확인 가능
+- module.변수명 / module.함수명 으로 접근 가능
+- 주의 : 서로 다른 모듈이 같은 이름의 함수를 제공할 경우 문제 발생
+    - 마지막에 import된 이름으로 대체됨
+    - 모듈 내 모든 요소를 한번에 import 하는 * 표기는 권장 X
+    - 모두 가져오기 때문에 메모리적으로도 비효율적
+        - from math import *
+- 사용자 정의 모듈 : 직접 정의한 모듈
+
+
+**모듈, 함수 모두 재사용성 ↑**
+**규모 : 패키지 > 모듈 > 함수**
+**모두 재사용하기 위한 코드 조각**
+
+
+## 파이썬 표준 라이브러리 
+- 파이썬 언어와 함께 제공되는 다양한 모듈 / 패키지의 모음
+
+    ### 패키지
+- 관련된 모듈들을 하나의 디렉토리에 모아 놓은 것
+- ex) from my_package.math import my_math  // form my_package.statistics import tools
+1. 내부 패키지 : 설치 없이 바로 import 하여 사용
+2. 외부 패키지 : pip를 사용하여 **설치** 후 import 필요
+- pip : 외부 패키지들을 설치하도록 도와주는 파이썬의 패키지 관리 시스템
+    - 설치 : cli => **pip install 패키지명**
+    - pip install requests
+        ```
+        import requests
+
+        url='https://jsonplaceholder.typicode.com/todos/1'
+        response = request.get(url).json() 
+        ```
+- 누가 만들어 놓은 모듈 편리하게 사용
+- 모듈들의 이름 공간 구분하여 충돌 방지
+- 모듈 효율적으로 관리/ 재사용 하도록 돕는 역할
+
+
+
+
+
 
 ## 참고사이트
 - [python documentation](https://docs.python.org/ko/3/)
     - 자습서/라이브러리 레퍼런스 참고
+- [파이썬 패키지 관리자(pip)](https://pypi.org/)
