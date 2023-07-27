@@ -89,8 +89,9 @@ s1.talk()
 ```
 
 ## Super()
+- 부모 클래스의 메서드를 호출하기 위해 사용되는 내장 함수
 
-++ 클래스간 두줄 간격 띄우기
+  
 
 ## 다중 상속
 
@@ -102,6 +103,7 @@ s1.talk()
     
 
 ```python
+# 코드 작성 시 클래스간 두줄 간격 띄우기
 class Person:
     def __init__(self, name):
         self.name = name
@@ -241,9 +243,8 @@ Exception |
         ⇒ except 절로 분기 시 **반드시 하위 클래스를 먼저 확인 할 수 있도록 작성**
         
     - [예외 계층 구조](https://docs.python.org/ko/3/library/exceptions.html#exception-hierarchy)
-    
-    ![Untitled](2023%2007%2027%20(%E1%84%86%E1%85%A9%E1%86%A8)%20OOP%202%20f044692286324013a78abc5a99ddd15c/Untitled.png)
-    
+       ![exception](https://github.com/jjm6604/TIL/assets/81950388/1a74d26c-d789-4669-b74f-4ab9ae65769f)
+
 
 ### 예외처리 방법
 
