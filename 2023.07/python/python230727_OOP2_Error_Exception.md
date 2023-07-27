@@ -114,8 +114,8 @@ class Person:
 class Mom(Person):
     gene = 'XX'
 		
-		def __init__(self, name):
-				super().__init__(name)
+    def __init__(self, name):
+        super().__init__(name)
 
     def swim(self):
         return '엄마가 수영'
@@ -123,15 +123,15 @@ class Mom(Person):
 class Dad(Person):
     gene = 'XY'
 
-		def __init__(self, name):
-				super().__init__(name)
+    def __init__(self, name):
+        super().__init__(name)
 
     def walk(self):
         return '아빠가 걷기'
 
 class FirstChild(Dad, Mom):
-		def __init__(self, name):
-				super().__init__(name)
+    def __init__(self, name):
+        super().__init__(name)
 
     def swim(self):
         return '첫째가 수영'
@@ -153,10 +153,10 @@ print(baby1.gene)     # XY
 
 ```python
 class FirstChild(Dad, Mom):
-		**mom_gene = Mom.gene  # 뒤에 상속받지만 필요한 경우 명시적으로 변수 작성해 가져오기**
+    mom_gene = Mom.gene  # 뒤에 상속받지만 필요한 경우 명시적으로 변수 작성해 가져오기
 
-		def __init__(self, name):
-				super().__init__(name)
+    def __init__(self, name):
+        super().__init__(name)
 
     def swim(self):
         return '첫째가 수영'
@@ -193,12 +193,9 @@ print(baby1.mom_gene)    # XX
 - 프로그램 실행 중 발생하는 예외 상황
 - 유형
 
-| 문법 에러
-Syntax Error | 예외
-Exception |
+| 문법 에러 Syntax Error | 예외 Exception |
 | --- | --- |
-| 프로그램의 구문이 올바르지 않은 경우 발생
-(오타, 괄호 및 콜론 누락 등의 문법적 오류) | 프로그램 실행 중 감지되는 에러 |
+| 프로그램의 구문이 올바르지 않은 경우 발생 (오타, 괄호 및 콜론 누락 등의 문법적 오류) | 프로그램 실행 중 감지되는 에러 |
 
 ### 예외 Exception
 
