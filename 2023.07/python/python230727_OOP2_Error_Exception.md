@@ -25,12 +25,12 @@ Object Oriented Programming
 
 ```python
 class Person:
-		def __init__(self, name, age):
-				self.name = name
-				self.age = age
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
 
-		def talk(self):
-				print(f'반갑습니다. {self.name} 입니다.')
+    def talk(self):
+        print(f'반갑습니다. {self.name} 입니다.')
 
 s1 = Person('김학생', 23)
 s2.talk()  # 반갑습니다. 김학생입니다.
@@ -43,22 +43,22 @@ p1.talk()  # 반갑습니다. 박교수입니다.
 
 ```python
 class Professor:
-		def __init__(self, name, age, department):
-				self.name = name
-				self.age = age
-				self.department = department
+    def __init__(self, name, age, department):
+        self.name = name
+        self.age = age
+        self.department = department
 
-		def talk(self):    # 중복
-				print(f'반갑습니다. {self.name} 입니다.')
+    def talk(self):    # 중복
+        print(f'반갑습니다. {self.name} 입니다.')
 
 class Student:        
-		def __init__(self, name, age, department):
-				self.name = name
-				self.age = age
-				self.gpa = gpa
+    def __init__(self, name, age, department):
+        self.name = name
+        self.age = age
+        self.gpa = gpa
 
-		def talk(self):    # 중복
-				print(f'반갑습니다. {self.name} 입니다.')
+    def talk(self):    # 중복
+        print(f'반갑습니다. {self.name} 입니다.')
 ```
 
 - 상속 활용한 계층 구조 변경
@@ -258,17 +258,17 @@ print(baby1.mom_gene)    # XX
 ```python
 # EAFP (파이썬 권장 방식/ but 이유는 딱히 X)
 try:
-		result = my_dict['key']
-		print(result)
+    result = my_dict['key']
+    print(result)
 except KeyError:
-		print('Key가 존재하지 않습니다.')
+    print('Key가 존재하지 않습니다.')
 
 # LBYL
 if 'key' in my_dict:
-		result = my_dict['key']
-		print(result)
+    result = my_dict['key']
+    print(result)
 else:
-		print('Key가 존재하지 않습니다.')
+    print('Key가 존재하지 않습니다.')
 ```
 
 | EAFP | LBYL |
@@ -285,9 +285,9 @@ else:
 ```python
 my_list = []
 try:
-		number = my_list[1]
+    number = my_list[1]
 except IndexError as error:
-		print(f'{error}가 발생했습니다.')
+    print(f'{error}가 발생했습니다.')
 
 # list index out of range가 발생했습니다.
 ```
