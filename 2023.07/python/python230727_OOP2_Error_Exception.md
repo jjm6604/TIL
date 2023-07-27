@@ -21,7 +21,7 @@ Object Oriented Programming
 
 ### 상속이 없는 경우 ?
 
-- 학생 / 교수 정보를 나타내기 어려움
+- 구분되는 정보를 나타내기 어려움(교수 / 학생 각각 필요한 정보)
 
 ```python
 class Person:
