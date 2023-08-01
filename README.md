@@ -1,4 +1,3 @@
-[2023년 07월](https://github.com/jjm6604/TIL/tree/main/2023.07)
-
-
-
+[git/markdown](https://github.com/jjm6604/TIL/tree/main/TIL/git%26markdown)
+[파이썬](https://github.com/jjm6604/TIL/tree/main/TIL/python)
+[알고리즘](https://github.com/jjm6604/TIL/tree/main/TIL/algorithm)
